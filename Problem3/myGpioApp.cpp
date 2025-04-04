@@ -24,9 +24,9 @@ int main(int argc, char* argv[]){
 	while(1){
 		led.setValue(1);
 		usleep(300000);
-		value = led.getValue();
+		int value = led.getValue();
 		std::cout << value << std::endl;
-		button_value = button.getValue();
+		int button_value = button.getValue();
 		std::cout << button_value << std::endl;
 	}
 	
