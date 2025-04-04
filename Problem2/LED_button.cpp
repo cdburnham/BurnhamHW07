@@ -12,9 +12,10 @@ int readButton(){
 	string path(BUTTON_PATH);
 	string pathName = path + "/value";
 	fs.open((pathName).c_str(), std::fstream::in);
-	int value; fs >> value;
+	char value;
+       	fs >> value;
 	fs.close();
-	return value;
+	return (value == '1') ? 1 : 0;
 
 }
 
